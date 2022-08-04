@@ -1,0 +1,4 @@
+<p>{{title}}</p> <!--toma la variable de clase "titulo" descripto en home.component.ts-->
+<input type="text" [(ngModel)]="title">
+<button [disabled]="modificado" (click)="cambiarTitle()">Cambiar Title</button>
+<app-banners></app-banners> <!--este lo inyecto desde banners y a su vez, los dos se inyectan a  app component-->
