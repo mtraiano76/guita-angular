@@ -1,4 +1,16 @@
-<p>{{title}}</p> <!--toma la variable de clase "titulo" descripto en home.component.ts-->
-<input type="text" [(ngModel)]="title">
+<p>{{title}}</p>
+<!--toma la variable de clase "titulo" descripto en home.component.ts-->
+
+<input type="text" [(ngModel)]="title" [class]="classInput">
 <button [disabled]="modificado" (click)="cambiarTitle()">Cambiar Title</button>
-<app-banners></app-banners> <!--este lo inyecto desde banners y a su vez, los dos se inyectan a  app component-->
+
+<div>
+    <input type="number" [(ngModel)]="op1">
+    <input type="number" [(ngModel)]="op2">
+    <button (click)="calcular()">Calcular</button>
+    <div [ngClass]="{ok:resultado>0,error:resultado<0}">resultado: {{resultado}}</div>
+</div>
+
+
+<app-banners></app-banners>
+<!--este lo inyecto desde banners y a su vez, los dos se inyectan a  app component-->
