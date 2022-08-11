@@ -12,7 +12,33 @@ export class HomeComponent implements OnInit {
   op1 = 0
   op2 = 0
   resultado = 0
+  productos=[
+    {
+      id:1,
+      title:"Gibson Les Paul",
+      price:100
+    },
+    {
+      id:2,
+      title:"Gibson Explorer",
+      price:150
+    }
+
+  ]
+  categorias=[
+    "Guitarras",
+    "Bajos"
+  ]
   constructor() { }
+  filtrar(){
+    this.productos=[
+      {
+        id:1,
+        title:"Gibson Les Paul",
+        price:100
+      }
+    ]
+  }
   cambiarTitle() {
     if (this.title === "") {
       this.classInput = "error"
