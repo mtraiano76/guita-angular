@@ -30,11 +30,11 @@ export class HomeComponent implements OnInit {
     "Bajos"
   ]
   constructor() { }
-  filtrar(){
+  add(){
     this.productos=[
       {
-        id:1,
-        title:"Gibson Les Paul",
+        id:3,
+        title:"Jackson",
         price:100
       }
     ]
