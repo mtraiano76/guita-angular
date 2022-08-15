@@ -14,9 +14,10 @@ export class RegistroComponent implements OnInit {
   ) { 
     this.myForm = this.fb.group({
       nombre:["",[Validators.required,Validators.minLength(3)]],
-      apellido:[""],
+      apellido:["",[Validators.required]],
+      telefone:[""],
       correo:["",[Validators.required]],
-      clave:["",[Validators.required]]
+      clave:["",[Validators.required,Validators.minLength(6),Validators.maxLength(10)]]
     })
   }
   registrarse(){

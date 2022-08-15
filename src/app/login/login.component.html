@@ -1,1 +1,17 @@
-<p>banners works!</p>
+<h3>LOGIN</h3>
+
+<form [formGroup]="myForm" (ngSubmit)="registrarse()">
+    <div>
+        <label>Email</label>
+        <input type="email" formControlName="correo">
+    </div>
+    <div *ngIf="myForm.get('correo')?.errors && myForm.get('correo')?.dirty">
+        <p *ngIf="myForm.get('correo')?.hasError('required')">El campo es obligatorio</p>
+        <p *ngIf="myForm.get('correo')?.hasError('minlength')">Debe escribir al menos 3 caracteres</p> <!--minlength va con minuscula-->
+    </div>
+    <div>
+        <label>Contraseña</label>
+        <input type="password" formControlName="clave">
+    </div>
+    <button [disabled]="myForm.invalid" type="submit">Login</button>
+</form>
