@@ -7,13 +7,17 @@ import { ProductosService } from '../services/productos.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  productos: any = []
+  productos: any 
   productosAsync: any = []
   productosObs: any = []
-  loading=true
+  loading:boolean=true
+  cantidad:number=0
+  titulo:string=""
+  categorias:string|number[]=[]
   constructor(
     private productosServices: ProductosService
   ) {
+    const title:string=""
     this.productosServices.getAll()
       .subscribe({
         next: (data: any) => {
