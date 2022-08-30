@@ -1,0 +1,11 @@
+.error {
+    background-color: red;
+}
+
+.ok {
+    background-color: green;
+}
+
+h2{
+    font-size: 15px;
+}
